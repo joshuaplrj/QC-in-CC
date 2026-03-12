@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Systems 3D Visualizer</title>
+    <!-- Modern dark theme styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Three.js CDN (r128) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- OrbitControls -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <!-- UI Overlay container -->
+    <div id="ui-container">
+        <h1 id="system-title">Quantum System Visualization</h1>
+        <p id="system-desc">Loading 3D Engine...</p>
+        
+        <div id="metrics-panel">
+            <div class="metric-row">
+                <span class="metric-label">VQE Optimizer State:</span>
+                <span id="metric-vqe" class="metric-val">Initializing</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Avg. Frame Render:</span>
+                <span id="metric-fps" class="metric-val">0ms</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- The WebGL Canvas container -->
+    <div id="canvas-container"></div>
+
+    <!-- Core Engine Scripts -->
+    <script src="engine.js"></script>
+    <script src="animations.js"></script>
+    
+    <script>
+        // Main initialization entrypoint
+        window.addEventListener('DOMContentLoaded', () => {
+            // Read ?system=... from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const systemKey = urlParams.get('system') || 'default';
+            
+            // Look up description via a very simple mapping locally if needed,
+            // or we just define it beautifully in animations.js metadata based on the systemKey
+            
+            // Boot up Three.js Engine
+            QuantumEngine3D.init(systemKey);
+        });
+    </script>
+</body>
+</html>

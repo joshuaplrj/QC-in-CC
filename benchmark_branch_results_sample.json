@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-02-07T12:17:05.884162+00:00",
+  "root": "C:\\Users\\John Jacob\\Desktop\\QB in CC",
+  "timeout_s": 45,
+  "pair_count": 3,
+  "summary_by_branch": [
+    {
+      "branch": "aerospace",
+      "total_modules": 3,
+      "successful_modules": 3,
+      "failed_modules": 0,
+      "avg_classical_time_s": 0.00030346666850770515,
+      "avg_quantum_time_s": 0.44315751393636066,
+      "avg_speedup_x": 0.0011085563119521125,
+      "median_speedup_x": 0.0012765827419886863
+    }
+  ],
+  "records": [
+    {
+      "branch": "aerospace",
+      "module": "aircraft_weight.py",
+      "quantum_rel": "aerospace/aircraft_weight.py",
+      "classical_rel": "aerospace/aircraft_weight.py",
+      "classical_ok": true,
+      "quantum_ok": true,
+      "classical_class": "AircraftWeightSimulator",
+      "quantum_class": "AircraftWeight",
+      "classical_time": 1.750001683831215e-05,
+      "quantum_time": 0.7645840644836426,
+      "speedup": 2.2888283514162283e-05,
+      "classical_error": null,
+      "quantum_error": null
+    },
+    {
+      "branch": "aerospace",
+      "module": "composite.py",
+      "quantum_rel": "aerospace/composite.py",
+      "classical_rel": "aerospace/composite.py",
+      "classical_ok": true,
+      "quantum_ok": true,
+      "classical_class": "CompositeAnalyzer",
+      "quantum_class": "Composite",
+      "classical_time": 0.00042860000394284725,
+      "quantum_time": 0.3357400894165039,
+      "speedup": 0.0012765827419886863,
+      "classical_error": null,
+      "quantum_error": null
+    },
+    {
+      "branch": "aerospace",
+      "module": "hypersonic.py",
+      "quantum_rel": "aerospace/hypersonic.py",
+      "classical_rel": "aerospace/hypersonic.py",
+      "classical_ok": true,
+      "quantum_ok": true,
+      "classical_class": "HypersonicSimulator",
+      "quantum_class": "Hypersonic",
+      "classical_time": 0.000464299984741956,
+      "quantum_time": 0.22914838790893555,
+      "speedup": 0.002026197910353489,
+      "classical_error": null,
+      "quantum_error": null
+    }
+  ]
+}
